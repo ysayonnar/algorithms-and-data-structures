@@ -7,6 +7,9 @@ import (
 
 func main() {
 	arr := []int{1, 0, -1, -2, -3, 123, 2, 99}
-	sortingalgos.BubbleSort(arr)
-	fmt.Println(arr)
+	fmt.Println("Before: ", arr)
+	sortingalgos.SelectionSort(arr)
+	fmt.Println("After: ", arr)
+
+	fmt.Println("Is sorted: ", sortingalgos.IsSorted(arr))
 }
