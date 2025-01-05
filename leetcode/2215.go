@@ -1,20 +1,26 @@
 package leetcode
 
-func pivotIndex(nums []int) int {
-	prefixSum := make([]int, len(nums))
-	suffixSum := make([]int, len(nums))
-	prefixSum[0] = nums[0]
-	suffixSum[len(nums)-1] = nums[len(nums)-1]
-
-	for i := 1; i < len(nums); i++ {
-		prefixSum[i] = prefixSum[i-1] + nums[i]
-		suffixSum[len(nums)-i-1] = suffixSum[len(nums)-i] + nums[len(nums)-i-1]
-	}
-	for i := 0; i < len(nums); i++ {
-		if prefixSum[i] == suffixSum[i] {
-			return i
+func difference(map1, map2 map[int]bool) []int {
+	diff := []int{}
+	for value, _ := range map1 {
+		if _, ok := map2[value]; !ok {
+			diff = append(diff, value)
 		}
 	}
+	return diff
+}
 
-	return -1
+func findDifference(nums1 []int, nums2 []int) [][]int {
+	map1 := make(map[int]bool)
+	map2 := make(map[int]bool)
+
+	for _, num := range nums1 {
+		map1[num] = true
+	}
+
+	for _, num := range nums2 {
+		map2[num] = true
+	}
+
+	return [][]int{difference(map1, map2), difference(map2, map1)}
 }
