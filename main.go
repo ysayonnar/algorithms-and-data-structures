@@ -1,17 +1,26 @@
 package main
 
 import (
-	sortingalgos "algos/sortingAlgos"
+	"algos/dataStructures"
 	"fmt"
-	"time"
 )
 
 func main() {
-	length := 1000000000
-	arr := sortingalgos.Generate(length)
-
-	now := time.Now()
-	arr = sortingalgos.MergeSort(arr)
-	fmt.Println("Time elapsed: ", time.Since(now).Milliseconds(), "ms. Array length: ", length)
-	fmt.Println("Is sorted: ", sortingalgos.IsSorted(arr))
+	tree := dataStructures.Tree{}
+	tree.Insert(50)
+	tree.Insert(25)
+	tree.Insert(20)
+	tree.Insert(15)
+	tree.Insert(17)
+	tree.Insert(10)
+	tree.Insert(5)
+	tree.Insert(-1)
+	tree.Insert(75)
+	tree.Insert(80)
+	tree.Insert(90)
+	tree.Insert(95)
+	fmt.Println("Search 5: ", tree.Search(5))
+	// tree.Delete(5)
+	fmt.Println("Search 5: ", tree.Search(5))
+	tree.PrintTreeStructure()
 }
