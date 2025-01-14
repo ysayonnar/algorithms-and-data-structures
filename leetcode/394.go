@@ -13,7 +13,6 @@ func isNumber(s byte) bool {
 
 func decodeString(s string) string {
 	result := []byte{}
-
 	leftIdx := 0
 	rightIdx := len(s) - 1
 	timesBytes := []byte{}
