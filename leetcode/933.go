@@ -4,7 +4,7 @@ type RecentCounter struct {
 	Requests []int
 }
 
-func Constructor() RecentCounter {
+func Constructor1() RecentCounter {
 	return RecentCounter{Requests: []int{}}
 }
 
