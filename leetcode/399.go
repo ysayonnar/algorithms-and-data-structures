@@ -18,7 +18,6 @@ func calculateDfs(graph map[string]map[string]float64, current string, destinati
 	return -1
 }
 
-// я ебал что это за пиздец а не задача ПОЧЕМУ ОНА МЕДИУМ Я РЕШАЛ ЕЕ ДВА ЧАСА НАХУЙ КАКИЕ УРАВНЕНИЯ ВЫ ЕБАНУЛИСЬ НА ЛИТКОДЕ ТАМ
 func calcEquation(equations [][]string, values []float64, queries [][]string) []float64 {
 	graph := map[string]map[string]float64{} // откуда: кудa: вес
 
