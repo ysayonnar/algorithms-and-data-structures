@@ -1,6 +1,6 @@
 package leetcode
 
-func guess(num int) int //leetcode implements
+func guess(num int) int { return 0 } //leetcode implements
 
 func guessNumber(n int) int {
 	left := 1
