@@ -5,7 +5,7 @@ type SmallestInfiniteSet struct {
 	currentMinimal int
 }
 
-func Constructor() SmallestInfiniteSet {
+func Constructor2() SmallestInfiniteSet {
 	return SmallestInfiniteSet{deleted: make(map[int]bool), currentMinimal: 1}
 }
 
