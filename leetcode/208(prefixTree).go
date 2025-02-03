@@ -1,19 +1,19 @@
 package leetcode
 
-type Node struct {
-	Children map[byte]*Node
+type Node1 struct {
+	Children map[byte]*Node1
 	isEnd    bool
 }
 
-type Trie struct {
-	Root *Node
+type Trie1 struct {
+	Root *Node1
 }
 
-func Constructor() Trie {
+func Constructor3() Trie {
 	return Trie{Root: &Node{Children: make(map[byte]*Node), isEnd: true}}
 }
 
-func (this *Trie) Insert(word string) {
+func (this *Trie) Insert2(word string) {
 	current := this.Root
 	symbols := []byte(word)
 	lastIndex := len(word)
@@ -33,7 +33,7 @@ func (this *Trie) Insert(word string) {
 	current.isEnd = true
 }
 
-func (this *Trie) Search(word string) bool {
+func (this *Trie) Search2(word string) bool {
 	current := this.Root
 	symbols := []byte(word)
 	for _, s := range symbols {
@@ -46,7 +46,7 @@ func (this *Trie) Search(word string) bool {
 	return current.isEnd
 }
 
-func (this *Trie) StartsWith(prefix string) bool {
+func (this *Trie) StartsWith2(prefix string) bool {
 	symbols := []byte(prefix)
 	current := this.Root
 	for _, s := range symbols {
