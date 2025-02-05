@@ -11,7 +11,7 @@ type Trie struct {
 	Root *Node
 }
 
-func Constructor() Trie {
+func Constructor4() Trie {
 	return Trie{Root: &Node{Children: make(map[byte]*Node), isEnd: true}}
 }
 
@@ -73,7 +73,7 @@ func (this *Trie) StartsWith(prefix string) []string {
 }
 
 func suggestedProducts(products []string, searchWord string) [][]string {
-	trie := Constructor()
+	trie := Constructor4()
 	for _, product := range products {
 		trie.Insert(product)
 	}
