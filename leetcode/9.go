@@ -1,6 +1,6 @@
 package leetcode
 
-func isPalindrome(x int) bool {
+func isPalindrome123(x int) bool {
 	//НОРМАЛЬНОЕ РЕШЕНИЕ
 	if x < 0 {
 		return false
