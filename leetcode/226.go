@@ -1,15 +1,11 @@
 package leetcode
 
 func invertTree(root *TreeNode) *TreeNode {
-	var invert func(root *TreeNode)
-	invert = func(root *TreeNode) {
-		if root == nil {
-			return
-		}
-		root.Left, root.Right = root.Right, root.Left
-		invertTree(root.Left)
-		invertTree(root.Right)
+	if root == nil {
+		return root
 	}
-	invert(root)
+	root.Right, root.Left = root.Left, root.Right
+	invertTree(root.Left)
+	invertTree(root.Right)
 	return root
 }
