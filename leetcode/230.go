@@ -4,7 +4,6 @@ func countNodesFromLeft(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
-
 	ctr := 1
 	var dfs func(root *TreeNode)
 	dfs = func(root *TreeNode) {
